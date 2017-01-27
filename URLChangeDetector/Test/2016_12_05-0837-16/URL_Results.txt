@@ -1,0 +1,6 @@
+Url	Time(Milliseconds)	Result	Message	Comparison	DifferentLineNumber	DifferentValue(Old)	DifferentValue(New)
+http://e.maplarge.com/	1673	Success		Identical	
+http://e.maplarge.com/Remote/GetTableInformation?longTableId=hms%2Fhotels	1773	Success		Different	1	7ecd3b53c642468ca43094647ad0fe08","hash":null,"success":true,"processingComplete":true,"isCached":fa	117624e1f93648fdae4ad6b05fba03a8","hash":null,"success":true,"processingComplete":true,"isCached":fa	
+http://5e.maplarge.com/Api/CacheRequest	2108	Failure	The remote server returned an error: (500) Internal Server Error.					
+http://geocoder.maplarge.com/geocoder/json?address=1545 Tibarron Pkwy SE&city=Smyrna&state=GA&zip=30080&country=	1701	Success		Identical	
+https://alphaapi.maplarge.com/Api/ProcessDirect	3050	Failure	no prior for comparison					

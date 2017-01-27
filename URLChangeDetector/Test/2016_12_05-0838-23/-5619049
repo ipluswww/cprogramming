@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+	<meta charset="utf-8">
+	<title>MapLarge API Server</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script type="text/javascript" src="/JS"></script>
+	<script type="text/javascript">
+		ml.onload(function () {
+		    ml.$("#mlhp-footer-year").html(moment().year() + "");
+
+			ml.$("a.ml-mm-login-icon").click(function (e) {
+				e.preventDefault();
+
+				if (ml.$(this).text() == 'Sign Out') {
+					ml.auth.logout(function () {
+						ml.$("a.ml-mm-login-icon").text("Sign In");
+					});
+				} else {
+					ml.auth.verifycred(function (response) {
+						ml.$("a.ml-mm-login-icon").text("Sign Out");
+					});
+				}
+			});
+
+			ml.auth.login(null, null, function (response) {
+				if (response.success) {
+					ml.$("a.ml-mm-login-icon").text("Sign Out");
+				}
+			});
+
+			var nvp = ml.nvp();
+
+			if (nvp.hash) {
+				var myComponent = ml.ui.MLUI.create(ml.ui.PasswordReset.type, {
+					input: {
+						hash: nvp.hash
+					},
+					callback: function (status, out) {
+						ml.log(out);
+					}
+				});
+
+				myComponent.show();
+			}
+
+		});
+	</script>
+	<style>
+		a.ml-mm-login-icon {
+			font-family: Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+			font-size: 14px;
+			text-decoration: none;
+			padding: 9px;
+			float: right;
+			margin-top: 18px;
+		}
+		/*-------------------------------------------*
+		/* Font Icons
+		/*-------------------------------------------*/
+
+		@font-face {
+			font-family: 'MapLarge';
+			src: url('./v4/fonts');
+			src: url('./v4/fonts/MapLarge.eot') format('embedded-opentype'), url('./v4/fonts/MapLarge.woff') format('woff'), url('./v4/fonts/MapLarge.ttf') format('truetype'), url('./v4/fonts/MapLarge.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		[class^="mlicon-"],
+		[class*=" mlicon-"] {
+			font-family: 'MapLarge';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.mlicon-x64SavedMaps:before {
+			content: "\e601";
+		}
+
+		.mlicon-x64QuickMap:before {
+			content: "\e602";
+		}
+
+		.mlicon-x64ImportData:before {
+			content: "\e61d";
+		}
+
+		.mlicon-x64TableBrowser:before {
+			content: "\e604";
+		}
+
+		.mlicon-x64AdvancedMapEditor:before {
+			content: "\e603";
+		}
+
+		.mlicon-x64Accounts:before {
+			content: "\e605";
+		}
+
+		.mlicon-x16Map:before {
+			content: "\e60a";
+		}
+
+		.mlicon-x16Broadcastdata:before {
+			content: "\e610";
+		}
+
+		[class^="icon-"],
+		[class*=" icon-"] {
+			font-family: 'MapLarge';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			/* Better Font Rendering =========== */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.mlhp-mm-widget-icon {
+			float: right;
+			margin-top: 20px;
+			font-size: 30px;
+			color: #2B425F;
+		}
+		/*-------------------------------------------*
+		/* Layout
+		/*-------------------------------------------*/
+		.mlhp-card-header-container {
+			background: url(./images/grey.png);
+			width: 100%;
+			padding-bottom: 5px;
+			padding-top: 7px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.mlhp-card-header {
+			text-align: left;
+		}
+
+		.mlhp-card-marketing-banner {
+			height: 65px;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			background: #2B476D;
+			position: relative;
+		}
+
+		.mlhp-card-body {
+			width: 268px;
+			cursor: pointer;
+			height: 105px;
+			border: 1px solid #aebed3;
+			border-radius: 8px;
+			-webkit-box-shadow: 4px 4px 7px #7f8b9a;
+			-moz-box-shadow: 4px 4px 7px #7f8b9a;
+			box-shadow: 4px 4px 7px #7f8b9a;
+			padding: 0 20px 20px 20px;
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: left;
+			background: #fff;
+		}
+
+			.mlhp-card-body:hover {
+				padding: 7px 23px 13px 17px;
+				background-color: #fbfdff;
+				-webkit-box-shadow: inset 4px 4px 7px #7f8b9a;
+				-moz-box-shadow: inset 4px 4px 7px #7f8b9a;
+				box-shadow: inset 4px 4px 7px #7f8b9a;
+			}
+
+		.mlhp-card-heading {
+			font-size: 20px;
+			font-weight: bold;
+			width: 220px;
+			color: #2B476D;
+			float: left;
+		}
+
+		.mlhome-container p {
+			font-size: 14px;
+			color: #666;
+			clear: both;
+		}
+
+		.mlhome-container a {
+			text-decoration: none;
+		}
+
+		.mlhp-footer-container {
+			background: #2B476D;
+			padding: 5px 0px 5px 20px;
+			color: #fff;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 13px;
+			clear: both;
+			position: fixed;
+			bottom: 0px;
+			width: 100%;
+		}
+
+		@media screen and (min-width: 325px) {
+			.mlhp-card-header {
+				text-align: left;
+				padding-left: 15px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.mlhome-container {
+				width: 100%;
+				padding-bottom: 50px;
+				padding-top: 50px;
+			}
+
+			.mlhome {
+				width: 315px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.mlhp-card-body {
+				margin-bottom: 30px;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.mlhp-card-header {
+				text-align: left;
+				width: 768px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.mlhp-card-body {
+			}
+		}
+
+		@media (min-width: 992px) {
+			.mlhp-card-header {
+				text-align: left;
+				width: 992px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.mlhome {
+				width: 992px;
+			}
+
+			.mlhp-card {
+				width: 45%;
+				float: left;
+			}
+
+			.mlhp-card-body {
+				margin-left: 110px;
+			}
+		}
+
+		@media (min-width: 1170px) {
+
+			.mlhome {
+				width: 1170px;
+			}
+
+			.mlhp-card-header {
+				text-align: left;
+				width: 1170px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.mlhp-card {
+				width: 33%;
+				float: left;
+			}
+
+			.mlhp-card-body {
+				margin-left: 50px;
+			}
+		}
+	</style>
+</head>
+<body style="height: 100%; margin: 0; background-image: url(./images/mapbg.png); background-color: #F5F5F5; background-size: cover;">
+	<div class="mlhp-card-header-container ml-ui-themes-default">
+		<div class="mlhp-card-header">
+			<img src="./images/maplargelogo3_0.png" height="70" />
+			<a class="ml-mm-login-icon ml-mm-menuitems ml-button ml-btn-default" title="Sign In" style="font-size: 13px; color: #213B77; font-weight: 600; padding: 10px; background: rgba(255, 255, 255, 0.42);">Sign In</a>
+		</div>
+	</div>
+	<div class="mlhp-card-marketing-banner"></div>
+	<div class="mlhome-container">
+		<div class="mlhome">
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="./Map.html?showimport=true">
+						<h3 class="mlhp-card-heading">Imports</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-x64ImportData"></i><p>Upload data inlcuding CSV, WKT, SHP, KML, GeoJSON and DXF.</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="./Map.html?showquickmap=true">
+						<h3 class="mlhp-card-heading">Quick Layers</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-x64QuickMap"></i><p>Create a new map with simple data layer overlays.</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="./Map.html?showsavedmaps=true">
+						<h3 class="mlhp-card-heading">Saved Maps</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-x64SavedMaps"></i><p>View and Share Saved Map Views</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="./Map.html?showsearchtables=true">
+						<h3 class="mlhp-card-heading">Table Browser</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-x64TableBrowser"></i><p>Find and view existing table data.</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="./Map.html?showeditor=true">
+						<h3 class="mlhp-card-heading">Map Editor</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-x64AdvancedMapEditor"></i><p>Create or edit maps with detailed setting options.</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="./Map.html?showusermanager=true">
+						<h3 class="mlhp-card-heading">Accounts</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-x64Accounts"></i><p>Manage account access with users and roles.</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="./Map.html">
+						<h3 class="mlhp-card-heading">View Map</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-x16Map"></i><p>View base map.</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="http://maplarge.com/developer">
+						<h3 class="mlhp-card-heading">Getting Started</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-x16Broadcastdata"></i><p>Help guides and videos on using MapLarge.</p>
+					</a>
+				</div>
+			</div>
+
+			<div class="mlhp-card">
+				<div class="mlhp-card-body">
+					<a href="/Example.html">
+						<h3 class="mlhp-card-heading">Example</h3>
+						<i class="mlhp-mm-widget-icon  mlicon-technology"></i><p>Custom environment to test JavaScript, HTML, and CSS code.</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mlhp-footer-container"><div class="mlhp-footer">&copy; <span id="mlhp-footer-year">2016</span> MapLarge, Inc.</div></div>
+
+</body>
+</html>

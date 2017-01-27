@@ -1,0 +1,6 @@
+D:\Work\UTMConverter\UTMConverter\UTMConverter\bin\Debug\UTMConverter.exe.config
+D:\Work\UTMConverter\UTMConverter\UTMConverter\bin\Debug\UTMConverter.exe
+D:\Work\UTMConverter\UTMConverter\UTMConverter\bin\Debug\UTMConverter.pdb
+D:\Work\UTMConverter\UTMConverter\UTMConverter\obj\Debug\UTMConverter.csprojResolveAssemblyReference.cache
+D:\Work\UTMConverter\UTMConverter\UTMConverter\obj\Debug\UTMConverter.exe
+D:\Work\UTMConverter\UTMConverter\UTMConverter\obj\Debug\UTMConverter.pdb

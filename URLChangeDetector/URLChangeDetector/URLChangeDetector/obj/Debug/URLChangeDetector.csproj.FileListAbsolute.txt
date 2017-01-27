@@ -1,0 +1,7 @@
+D:\Work\URLChangeDetector\URLChangeDetector\URLChangeDetector\bin\Debug\URLChangeDetector.exe.config
+D:\Work\URLChangeDetector\URLChangeDetector\URLChangeDetector\bin\Debug\URLChangeDetector.exe
+D:\Work\URLChangeDetector\URLChangeDetector\URLChangeDetector\bin\Debug\URLChangeDetector.pdb
+D:\Work\URLChangeDetector\URLChangeDetector\URLChangeDetector\bin\Debug\NDesk.Options.dll
+D:\Work\URLChangeDetector\URLChangeDetector\URLChangeDetector\obj\Debug\URLChangeDetector.exe
+D:\Work\URLChangeDetector\URLChangeDetector\URLChangeDetector\obj\Debug\URLChangeDetector.pdb
+D:\Work\URLChangeDetector\URLChangeDetector\URLChangeDetector\obj\Debug\URLChangeDetector.csprojResolveAssemblyReference.cache

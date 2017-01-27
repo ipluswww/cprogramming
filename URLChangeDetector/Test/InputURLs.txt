@@ -1,0 +1,5 @@
+http://e.maplarge.com/	get	
+http://e.maplarge.com/Remote/GetTableInformation?longTableId=hms%2Fhotels	get	
+http://5e.maplarge.com/Api/CacheRequest	post	{"action":"table/query","query":{"sqlselect":["HotelID.count"],"start":0,"table":"hms/hotels/634539025585117117","take":100}}
+http://geocoder.maplarge.com/geocoder/json?address=1545 Tibarron Pkwy SE&city=Smyrna&state=GA&zip=30080&country=	get	
+https://alphaapi.maplarge.com/Api/ProcessDirect	post	aInfo=mluser:root_user@ml.com;mltoken:-2022801294_1468515773&request={%22action%22:%22table/query%22,%22query%22:{%22orderby%22:[%22StarRating.desc%22],%22sqlselect%22:[%22Address%22,%22StarRating%22],%22start%22:%220%22,%22table%22:%22hms/hotels%22,%22take%22:%2210%22}}&uParams=formatType:csv	
