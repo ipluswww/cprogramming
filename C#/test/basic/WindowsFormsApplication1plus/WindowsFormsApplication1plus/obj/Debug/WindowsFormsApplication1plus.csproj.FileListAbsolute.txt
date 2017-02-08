@@ -1,0 +1,8 @@
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\test\WindowsFormsApplication1plus\WindowsFormsApplication1plus\bin\Debug\WindowsFormsApplication1plus.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\test\WindowsFormsApplication1plus\WindowsFormsApplication1plus\obj\Debug\WindowsFormsApplication1plus.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\test\WindowsFormsApplication1plus\WindowsFormsApplication1plus\obj\Debug\WindowsFormsApplication1plus.Properties.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\test\WindowsFormsApplication1plus\WindowsFormsApplication1plus\obj\Debug\WindowsFormsApplication1plus.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\test\WindowsFormsApplication1plus\WindowsFormsApplication1plus\bin\Debug\WindowsFormsApplication1plus.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\test\WindowsFormsApplication1plus\WindowsFormsApplication1plus\bin\Debug\WindowsFormsApplication1plus.pdb
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\test\WindowsFormsApplication1plus\WindowsFormsApplication1plus\obj\Debug\WindowsFormsApplication1plus.exe
+C:\Users\Administrator\Documents\Visual Studio 2013\Projects\test\WindowsFormsApplication1plus\WindowsFormsApplication1plus\obj\Debug\WindowsFormsApplication1plus.pdb
