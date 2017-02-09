@@ -1,0 +1,316 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\ColorSetting.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ColorSetting.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_COLORSITTING_DIALOG DIALOGEX 0, 0, 397, 288
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Color Setting"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Opened Poker Table List",IDC_STATIC,7,7,383,54
+    LISTBOX         IDC_LIST1,14,18,369,35,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "User Color",IDC_STATIC,7,62,110,162,WS_GROUP
+    CONTROL         "Player 1",IDC_PLAYER1,"Button",BS_AUTORADIOBUTTON,14,76,39,9
+    CONTROL         "Player 2",IDC_PLAYER2,"Button",BS_AUTORADIOBUTTON,14,93,39,9
+    CONTROL         "Player 3",IDC_PLAYER3,"Button",BS_AUTORADIOBUTTON,14,109,39,9
+    CONTROL         "Player 4",IDC_PLAYER4,"Button",BS_AUTORADIOBUTTON,14,125,39,9
+    CONTROL         "Player 5",IDC_PLAYER5,"Button",BS_AUTORADIOBUTTON,14,141,39,9
+    CONTROL         "Player 6",IDC_PLAYER6,"Button",BS_AUTORADIOBUTTON,14,157,39,9
+    CONTROL         "Player 7",IDC_PLAYER7,"Button",BS_AUTORADIOBUTTON,14,173,39,9
+    CONTROL         "Player 8",IDC_PLAYER8,"Button",BS_AUTORADIOBUTTON,14,189,39,9
+    CONTROL         "Player 9",IDC_PLAYER9,"Button",BS_AUTORADIOBUTTON,14,205,39,9
+    CONTROL         "Player 1",IDC_PLAYERPOS1,"Button",BS_AUTORADIOBUTTON,128,76,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH1,209,75,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 2",IDC_PLAYERPOS2,"Button",BS_AUTORADIOBUTTON,128,93,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH2,209,91,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 3",IDC_PLAYERPOS3,"Button",BS_AUTORADIOBUTTON,128,109,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH3,209,107,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 4",IDC_PLAYERPOS4,"Button",BS_AUTORADIOBUTTON,128,125,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH4,209,123,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 5",IDC_PLAYERPOS5,"Button",BS_AUTORADIOBUTTON,128,141,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH5,209,139,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 6",IDC_PLAYERPOS6,"Button",BS_AUTORADIOBUTTON,128,157,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH6,209,156,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 7",IDC_PLAYERPOS7,"Button",BS_AUTORADIOBUTTON,128,173,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH7,209,172,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 8",IDC_PLAYERPOS8,"Button",BS_AUTORADIOBUTTON,128,189,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH8,209,188,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 9",IDC_PLAYERPOS9,"Button",BS_AUTORADIOBUTTON,128,205,39,9
+    PUSHBUTTON      "Re",IDC_REFRESH9,209,204,14,13,NOT WS_TABSTOP
+    CONTROL         "Player 1",IDC_EMPTYPLAYERPOS1,"Button",BS_AUTORADIOBUTTON,289,76,39,9
+    CONTROL         "Player 2",IDC_EMPTYPLAYERPOS2,"Button",BS_AUTORADIOBUTTON,289,92,39,9
+    CONTROL         "Player 3",IDC_EMPTYPLAYERPOS3,"Button",BS_AUTORADIOBUTTON,289,108,39,9
+    CONTROL         "Player 4",IDC_EMPTYPLAYERPOS4,"Button",BS_AUTORADIOBUTTON,289,125,39,9
+    CONTROL         "Player 5",IDC_EMPTYPLAYERPOS5,"Button",BS_AUTORADIOBUTTON,289,141,39,9
+    CONTROL         "Player 6",IDC_EMPTYPLAYERPOS6,"Button",BS_AUTORADIOBUTTON,289,157,39,9
+    CONTROL         "Player 7",IDC_EMPTYPLAYERPOS7,"Button",BS_AUTORADIOBUTTON,289,173,39,9
+    CONTROL         "Player 8",IDC_EMPTYPLAYERPOS8,"Button",BS_AUTORADIOBUTTON,289,189,39,9
+    CONTROL         "Player 9",IDC_EMPTYPLAYERPOS9,"Button",BS_AUTORADIOBUTTON,289,205,39,9
+    CONTROL         "Sitting Out",IDC_CHKSITTINGOUT,"Button",BS_AUTORADIOBUTTON,135,241,45,9
+    PUSHBUTTON      "Re",IDC_REFRESH10,184,240,14,13,NOT WS_TABSTOP
+    CONTROL         "Active",IDC_CHKACTIVE,"Button",BS_AUTORADIOBUTTON,135,257,45,9
+    PUSHBUTTON      "Re",IDC_REFRESH11,184,256,14,13,NOT WS_TABSTOP
+    GROUPBOX        "Table Type",IDC_STATIC,7,226,110,54,WS_GROUP
+    CONTROL         "2 Handed Table",IDC_TABLETYPE2,"Button",BS_AUTORADIOBUTTON,26,240,67,10
+    CONTROL         "6 Handed Table",IDC_TABLETYPE6,"Button",BS_AUTORADIOBUTTON,26,253,67,10
+    CONTROL         "9 Handed Table",IDC_TABLETYPE9,"Button",BS_AUTORADIOBUTTON,26,266,67,10
+    DEFPUSHBUTTON   "OK (Save)",IDOK,283,266,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,340,266,50,14
+    EDITTEXT        IDC_POS1,56,75,34,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_POS2,56,91,34,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_POS3,56,107,34,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_POS4,56,124,34,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_POS5,56,139,34,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_POS6,56,156,34,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_POS7,56,172,34,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_POS8,56,188,34,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_POS9,56,204,34,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "",IDC_COLOR_11,"Static",SS_BLACKFRAME,96,75,14,13
+    CONTROL         "",IDC_COLOR_12,"Static",SS_BLACKFRAME,227,75,14,13
+    CONTROL         "",IDC_COLOR_13,"Static",SS_BLACKFRAME,243,75,14,13
+    CONTROL         "",IDC_COLOR_21,"Static",SS_BLACKFRAME,96,91,14,13
+    CONTROL         "",IDC_COLOR_22,"Static",SS_BLACKFRAME,227,91,14,13
+    CONTROL         "",IDC_COLOR_23,"Static",SS_BLACKFRAME,243,91,14,13
+    CONTROL         "",IDC_COLOR_31,"Static",SS_BLACKFRAME,96,107,14,13
+    CONTROL         "",IDC_COLOR_32,"Static",SS_BLACKFRAME,227,107,14,13
+    CONTROL         "",IDC_COLOR_33,"Static",SS_BLACKFRAME,243,107,14,13
+    CONTROL         "",IDC_COLOR_41,"Static",SS_BLACKFRAME,96,123,14,13
+    CONTROL         "",IDC_COLOR_42,"Static",SS_BLACKFRAME,227,123,14,13
+    CONTROL         "",IDC_COLOR_43,"Static",SS_BLACKFRAME,243,123,14,13
+    CONTROL         "",IDC_COLOR_51,"Static",SS_BLACKFRAME,96,139,14,13
+    CONTROL         "",IDC_COLOR_52,"Static",SS_BLACKFRAME,227,139,14,13
+    CONTROL         "",IDC_COLOR_53,"Static",SS_BLACKFRAME,243,139,14,13
+    CONTROL         "",IDC_COLOR_61,"Static",SS_BLACKFRAME,96,156,14,13
+    CONTROL         "",IDC_COLOR_62,"Static",SS_BLACKFRAME,227,156,14,13
+    CONTROL         "",IDC_COLOR_63,"Static",SS_BLACKFRAME,243,156,14,13
+    CONTROL         "",IDC_COLOR_71,"Static",SS_BLACKFRAME,96,172,14,13
+    CONTROL         "",IDC_COLOR_72,"Static",SS_BLACKFRAME,227,172,14,13
+    CONTROL         "",IDC_COLOR_73,"Static",SS_BLACKFRAME,243,172,14,13
+    CONTROL         "",IDC_COLOR_81,"Static",SS_BLACKFRAME,96,188,14,13
+    CONTROL         "",IDC_COLOR_82,"Static",SS_BLACKFRAME,227,188,14,13
+    CONTROL         "",IDC_COLOR_83,"Static",SS_BLACKFRAME,243,188,14,13
+    CONTROL         "",IDC_COLOR_91,"Static",SS_BLACKFRAME,96,204,14,13
+    CONTROL         "",IDC_COLOR_92,"Static",SS_BLACKFRAME,227,204,14,13
+    CONTROL         "",IDC_COLOR_93,"Static",SS_BLACKFRAME,243,204,14,13
+    EDITTEXT        IDC_SEATPOS1,169,75,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_SEATPOS2,169,91,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_SEATPOS3,169,107,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_SEATPOS7,169,172,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_SEATPOS8,169,188,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_SEATPOS9,169,204,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_SEATPOS4,169,123,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_SEATPOS5,169,139,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "",IDC_COLOR_24,"Static",SS_BLACKFRAME,259,91,14,13
+    CONTROL         "",IDC_COLOR_34,"Static",SS_BLACKFRAME,259,107,14,13
+    CONTROL         "",IDC_COLOR_44,"Static",SS_BLACKFRAME,259,123,14,13
+    CONTROL         "",IDC_COLOR_54,"Static",SS_BLACKFRAME,259,139,14,13
+    CONTROL         "",IDC_COLOR_64,"Static",SS_BLACKFRAME,259,156,14,13
+    CONTROL         "",IDC_COLOR_74,"Static",SS_BLACKFRAME,259,172,14,13
+    CONTROL         "",IDC_COLOR_84,"Static",SS_BLACKFRAME,259,188,14,13
+    CONTROL         "",IDC_COLOR_94,"Static",SS_BLACKFRAME,259,204,14,13
+    CONTROL         "",IDC_COLOR_14,"Static",SS_BLACKFRAME,259,75,14,13
+    EDITTEXT        IDC_SEATPOS6,169,156,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS1,331,75,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS2,331,91,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS3,331,107,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS7,331,172,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS8,331,188,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS9,331,204,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS4,331,123,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS5,331,139,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EMPTYPOS6,331,156,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "",IDC_COLOR_25,"Static",SS_BLACKFRAME,370,91,14,13
+    CONTROL         "",IDC_COLOR_35,"Static",SS_BLACKFRAME,370,107,14,13
+    CONTROL         "",IDC_COLOR_45,"Static",SS_BLACKFRAME,370,123,14,13
+    CONTROL         "",IDC_COLOR_55,"Static",SS_BLACKFRAME,370,139,14,13
+    CONTROL         "",IDC_COLOR_65,"Static",SS_BLACKFRAME,370,156,14,13
+    CONTROL         "",IDC_COLOR_75,"Static",SS_BLACKFRAME,370,172,14,13
+    CONTROL         "",IDC_COLOR_85,"Static",SS_BLACKFRAME,370,188,14,13
+    CONTROL         "",IDC_COLOR_95,"Static",SS_BLACKFRAME,370,204,14,13
+    CONTROL         "",IDC_COLOR_15,"Static",SS_BLACKFRAME,370,75,14,13
+    GROUPBOX        "Player Color",IDC_STATIC,123,62,156,162,WS_GROUP
+    GROUPBOX        "Empty Color",IDC_STATIC,284,62,106,162,WS_GROUP
+    CONTROL         "10 Hand",IDC_TABLETYPE10,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,43,229,42,10
+    EDITTEXT        IDC_SITTINGOUTPOS,201,240,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "",IDC_COLOR_SITTINGOUT_01,"Static",SS_BLACKFRAME,240,240,14,13
+    EDITTEXT        IDC_ACTIVEPOS,202,256,35,13,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "",IDC_COLOR_ACTIVE_01,"Static",SS_BLACKFRAME,240,256,14,13
+    GROUPBOX        "Other Color",IDC_STATIC,123,226,157,54,WS_GROUP
+    CONTROL         "",IDC_COLOR_SITTINGOUT_02,"Static",SS_BLACKFRAME,257,240,14,13
+    CONTROL         "",IDC_COLOR_ACTIVE_02,"Static",SS_BLACKFRAME,257,256,14,13
+END
+
+IDD_IMAGE_DIALOG DIALOGEX 0, 0, 390, 256
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDCANCEL,247,229,60,20,NOT WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ColorSetting.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "ColorSetting.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_COLORSITTING_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 390
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 280
+    END
+
+    IDD_IMAGE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 383
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 249
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\ColorSetting.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
