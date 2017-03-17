@@ -144,6 +144,7 @@ BOOL CALLBACK EnumWindowsProc(
 	
 	return TRUE;
 }
+
 BOOL CColorDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
@@ -371,6 +372,7 @@ LRESULT CColorDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 		Invalidate(TRUE);
 
 	}
+
 	if(message == WM_SENDCOLOR || message == WM_SEATPOSITION)
 	{
 		POINT pt = *(POINT*)wParam;
@@ -458,6 +460,7 @@ LRESULT CColorDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		Invalidate(TRUE);
 	}
+
 	if(message == WM_JOINPOSITION)
 	{
 		POINT pt = *(POINT*)wParam;
@@ -467,6 +470,7 @@ LRESULT CColorDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 		sprintf(szPos, "%d, %d", colorsetting->ptJoin.x, colorsetting->ptJoin.y);
 		GetDlgItem(IDC_JOINPOS)->SetWindowText(szPos);
 	}
+
 	if(message == WM_EMPTYPOSITION)
 	{
 		POINT pt = *(POINT*)wParam;
@@ -548,6 +552,7 @@ LRESULT CColorDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		Invalidate(TRUE);
 	}
+	
 	return CDialog::WindowProc(message, wParam, lParam);
 }
 

@@ -31,6 +31,7 @@ namespace UTMConverter
         const double MAX_LONGITUDE = +180.0;
         const double MIN_LATITUDE = -80.0;
         const double MAX_LATITUDE = +84.0;
+
         static void Main(string[] args)
         {
             if (args.Length == 0)
@@ -40,6 +41,7 @@ namespace UTMConverter
                 Console.WriteLine("Latitude : " + wgs.Latitude.ToString());
 
                 UTM utm = ToUTM(44.18534110153871, 46.84697229537016);
+
                 Console.WriteLine("East : " + utm.East.ToString());
                 Console.WriteLine("North : " + utm.North.ToString());
                 Console.WriteLine("Zone : " + utm.Zone.ToString());
@@ -59,6 +61,7 @@ namespace UTMConverter
         {
             long count = 0;
             Stopwatch stopWatch = new Stopwatch();
+
             try
             {
                 count = Convert.ToInt64(args[1]);
@@ -92,14 +95,16 @@ namespace UTMConverter
                 Console.WriteLine("Invalid arguments");
                 return;
             }
+
             Console.WriteLine("Rows : " + count.ToString());
             Console.WriteLine("Elappsed Time(miliseconds) : " + stopWatch.ElapsedMilliseconds.ToString());
 
 
         }
+
         public static UTM ToUTM(double longitude, double latitude)
         {
-            
+
 
             if (longitude <= MIN_LONGITUDE || longitude > MAX_LONGITUDE || latitude < MIN_LATITUDE || latitude > MAX_LATITUDE)
             {
@@ -116,13 +121,13 @@ namespace UTMConverter
             
             if ((latitude >= 56d) && (latitude < 64d) && (longitude >= 3d) && (longitude < 12d))
             {
-            
+
                 zone = 32;
 
             }
             else if (latitude >= 72d)
             {
-            
+
                 if ((longitude >= 0d) && (longitude < 9d)) zone = 31;
                 else if ((longitude >= 9d) && (longitude < 21d)) zone = 33;
                 else if ((longitude >= 21d) && (longitude < 33d)) zone = 35;
@@ -131,14 +136,13 @@ namespace UTMConverter
 
             string sZone = string.Format("00", zone);
             int bandIndex = (int)(1 + (latitude + 80) / 8);
-            string band = UTM_BAND.Substring(bandIndex - 1, 1);
-
-            
+            string band = UTM_BAND.Substring(bandIndex - 1, 1);            
             double latitudeRad = latitude * Math.PI / 180;
 
             double tan1 = Math.Tan(latitudeRad);
             double tan2 = Math.Pow(tan1, 2);
             double tan4 = Math.Pow(tan1, 4);
+
             double cosinus1 = Math.Cos(latitudeRad);
             double cosinus2 = Math.Pow(cosinus1, 2);
             double cosinus3 = Math.Pow(cosinus1, 3);
@@ -148,9 +152,7 @@ namespace UTMConverter
             double eta = WGS84_EXCENT2 * cosinus2;
 
             double tc = WGS84_POL / Math.Sqrt(1 + eta);
-
             double maLen = (kf0 * latitude) + (kf2 * Math.Sin(2 * latitudeRad)) + (kf4 * Math.Sin(4 * latitudeRad)) + (kf6 * Math.Sin(6 * latitudeRad));
-
             int merid = (zone - 30) * 6 - 3;
 
             double dLongitude1 = (longitude - merid) * Math.PI / 180;
@@ -159,7 +161,6 @@ namespace UTMConverter
             double dLongitude4 = Math.Pow(dLongitude1, 4);
             double dLongitude5 = Math.Pow(dLongitude1, 5);
 
-            
             double east, north;
             if (latitude < 0)
             {
@@ -169,6 +170,7 @@ namespace UTMConverter
             {
                 north = UTM_FACTOR * (maLen + tc * cosinus2 * tan1 * dLongitude2 / 2 + tc * cosinus4 * tan1 * (5 - tan2 + 9 * eta) * dLongitude4 / 24);
             }
+
             east = UTM_FACTOR * (tc * cosinus1 * dLongitude1 + tc * cosinus3 * (1 - tan2 + eta) * dLongitude3 / 6 + tc * cosinus5 * (5 - 18 * tan2 + tan4) * dLongitude5 / 120) + UTM_FALSE_EASTING;
 
             north = Math.Round(north, 3);
@@ -176,6 +178,7 @@ namespace UTMConverter
 
             return new UTM(zone, band, east, north);
         }
+
         public static WGS84 ToWGS84(int zone, string band, double east, double north)
         {
 
@@ -185,6 +188,7 @@ namespace UTMConverter
             double kf6 = (180 / Math.PI) * (151 * WGS84_EXCENT6 / 6144 - 453 * WGS84_EXCENT8 / 12288);
 
             char b = band.ToCharArray()[0];
+
             if (b < 'N' && band != "")
             {
                 north = north - 10E+06;
@@ -262,8 +266,6 @@ namespace UTMConverter
                 East = east;
                 North = north;
             }
-        }
-
-        
+        }        
     }
 }

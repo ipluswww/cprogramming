@@ -393,6 +393,7 @@ void CColorSettingDlg::SaveSetting(void)
 	GetModuleFileName(NULL, szFileName, 256);
 
 	char* ptemp = strrchr(szFileName, '\\');
+
 	if(ptemp)
 		strcpy(ptemp, "\\Config.dat");
 
@@ -465,6 +466,7 @@ LRESULT CColorSettingDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		char szPos[256];
 		sprintf(szPos, "%d, %d", pt.x, pt.y);
+
 		switch (nIndex)
 		{
 		case 0:
@@ -499,6 +501,7 @@ LRESULT CColorSettingDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 		Invalidate(TRUE);
 
 	}
+
 	if(message == WM_SENDCOLOR || message == WM_SEATPOSITION)
 	{
 		POINT pt = *(POINT*)wParam;
@@ -555,6 +558,7 @@ LRESULT CColorSettingDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		char szPos[256];
 		sprintf(szPos, "%d, %d", pt.x, pt.y);
+
 		switch (nIndex)
 		{
 		case 0:
@@ -588,6 +592,7 @@ LRESULT CColorSettingDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		Invalidate(TRUE);
 	}
+
 	if(message == WM_SENDCOLOR_SITTINGOUT || message == WM_SITTINGOUTPOSITION)
 	{
 		POINT pt = *(POINT*)wParam;
@@ -607,6 +612,7 @@ LRESULT CColorSettingDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		Invalidate(TRUE);
 	}
+
 	if(message == WM_SENDCOLOR_ACTIVATE || message == WM_ACTIVEPOSITION)
 	{
 		POINT pt = *(POINT*)wParam;
@@ -626,6 +632,7 @@ LRESULT CColorSettingDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		Invalidate(TRUE);
 	}
+
 	if(message == WM_EMPTYPOSITION)
 	{
 		POINT pt = *(POINT*)wParam;
@@ -676,6 +683,7 @@ LRESULT CColorSettingDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		char szPos[256];
 		sprintf(szPos, "%d, %d", pt.x, pt.y);
+
 		switch (nIndex)
 		{
 		case 0:
@@ -709,6 +717,7 @@ LRESULT CColorSettingDlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 		Invalidate(TRUE);
 	}
+	
 	return CDialog::WindowProc(message, wParam, lParam);
 }
 
